@@ -22,10 +22,13 @@ ensure od_profile
 ## SKills
 Remember that all of the functions that is "TriggerServerEvent" is on client-side.
 
-Add "TriggerServerEvent('od_skills:addStamina', GetPlayerServerId(PlayerId()), (math.random() + 0))" to esx_gym where you want people to gain Stamina.
-Add "TriggerServerEvent('od_skills:addStrength', GetPlayerServerId(PlayerId()), (math.random() + 0))" to esx_gym where you want people to gain Strength.
-Add "TriggerServerEvent('od_skills:addFishing', GetPlayerServerId(PlayerId()), (math.random() + 0))" to your favorite fishing-mod. (I had my own fishing system so some tweaking might be required)
-Add "TriggerServerEvent('od_skills:addDrugs', GetPlayerServerId(PlayerId()), (math.random() + 0))" to esx_drugs where you want people to gain drug-skill.
+- Add "TriggerServerEvent('od_skills:addStamina', GetPlayerServerId(PlayerId()), (math.random() + 0))"
+
+- Add "TriggerServerEvent('od_skills:addStrength', GetPlayerServerId(PlayerId()), (math.random() + 0))"  
+
+- Add "TriggerServerEvent('od_skills:addFishing', GetPlayerServerId(PlayerId()), (math.random() + 0))"
+
+- Add "TriggerServerEvent('od_skills:addDrugs', GetPlayerServerId(PlayerId()), (math.random() + 0))"
 
 ### License
 od_profile
