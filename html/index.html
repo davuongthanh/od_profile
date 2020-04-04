@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="css/style.css" type="text/css">
+		<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+		<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
+		<script src="./app.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-3">
+					<ul class="list-group">
+						<li class="list-group-item" style="background: rgba(0,0,0,0);"><center>
+							<img id="avatar" src="" class="img-thumbnail" style="background: rgba(0,0,0,0);border-color:rgba(0,0,0,0);">
+						</center>
+						</li>
+						
+						<li class="list-group-item" style="background: rgba(0,0,0,0);">
+							<div class="imgicon">
+								<img src="img/sotienmat.png" class="mr-4">
+								<div id="sotienmat">
+									0
+								</div>
+							</div>
+							
+							<div class="imgicon">
+								<img src="img/nganhang.png" class="mr-4">
+								<div id="nganhang">
+									0
+								</div>
+							</div>
+							
+							<div class="imgicon">
+								<img src="img/sotienban.png" class="mr-4">
+								<div id="sotienban">
+									0
+								</div>
+							</div>
+							
+							<div class="imgicon">
+								<div>[ID:<span id="playerid"></span>]
+								</div>
+							</div>
+							
+						</li>
+					</ul>
+				
+				</div>	
+
+				<div class="col-8">
+					<div class="stats"> 
+						<div class="stats-thongtin">
+							<div class="p-3 mb-2 bg-warning text-white">
+								<div class="imgicon">
+									<img src="img/hovaten.png" class="mr-3">
+									<div id="hovaten">
+										Họ Và Tên
+									</div>
+								</div>
+							</div>
+							
+							<div class="p-3 mb-2 bg-danger text-white">
+								<div class="imgicon">
+									<img src="img/gioitinh.png" class="mr-3">
+									<div id="gioitinh">
+										Giới Tính
+									</div>
+									
+								</div>
+							</div>
+							
+							<div class="p-3 mb-2 bg-success text-white">
+								<div class="imgicon">
+									<img src="img/ngaysinh.png" class="mr-3">
+									<div id="ngaysinh">
+										Ngày Sinh
+									</div>
+								</div>
+							</div>
+							
+							<div class="p-3 mb-2 bg-primary text-dark">
+								<div class="imgicon">
+									<img src="img/congviec.png" class="mr-3">
+									<div id="congviec">
+										Công Việc
+									</div>
+								</div>
+							</div>
+							
+							<div class="p-3 mb-2 bg-info text-white">
+								<div class="imgicon">
+									<img src="img/sodienthoai.png" class="mr-3">
+									<div id="sodienthoai">
+										Số Điện Thoại
+									</div>
+								</div>
+							</div>
+							
+						</div>
+						
+						<table class="table table-sm table-dark">
+						  <thead>
+							<tr>
+							  <th scope="col">#</th>
+							  <th scope="col">Số Lần Đi Tù</th>
+							  <th scope="col">Số Lần Bị Phạt</th>
+							  <th scope="col">Số Lần Lao Động Công Ích</th>
+							</tr>
+						  </thead>
+						  <tbody>
+							<tr>
+							  <th scope="row"></th>
+							  <td id="solanditu" >Chưa Cập Nhật</td>
+							  <td id="solanbiphat" >Chưa Cập Nhật</td>
+							  <td id="solandilaodong" >Chưa Cập Nhật</td>
+							</tr>
+							
+							<tr>
+							  <th scope="row">Hạnh Kiểm</th>
+							  <td id="hocluc" >Như ...</td>
+							</tr>
+							
+						  </tbody>
+						</table>
+					
+					</div>
+					
+					
+				</div>
+				<!--skills-->
+			<div class="dialog">
+				<div class="info">
+					<p>Kỹ Năng Sống</p>
+				</div>
+				<div class="skill">
+					<span>Thể lực: <span id="staminaInfo">0%</span></p>
+					<div id="staminaProgress">
+						<div id="staminaBar"></div>
+					</div>
+				</div>
+				<div class="skill">
+					<span>Sức mạnh: <span id="strengthInfo">0%</span></p>
+					<div id="strengthProgress">
+						<div id="strengthBar"></div>
+					</div>
+				</div>
+				<div class="skill">
+					<span>Lái xe: <span id="drivingInfo">0%</span></p>
+					<div id="drivingProgress">
+						<div id="drivingBar"></div>
+					</div>
+				</div>
+				<div class="skill">
+					<span>Bắn súng: <span id="shootingInfo">0%</span></p>
+					<div id="shootingProgress">
+						<div id="shootingBar"></div>
+					</div>
+				</div>
+				<div class="skill">
+					<span>Câu cá: <span id="fishingInfo">0%</span></p>
+					<div id="fishingProgress">
+						<div id="fishingBar"></div>
+					</div>
+				</div>
+				<div class="skill">
+					<span>Buôn thuốc: <span id="drugsInfo">0%</span></p>
+					<div id="drugsProgress">
+						<div id="drugsBar"></div>
+					</div>
+				</div>
+			</div>
+			
+			<!--/skills-->
+				
+			</div>
+			
+			
+		</div>
+	<script>
+    $(document).mousedown(function (e) {
+        if (e.which == 3) {
+            $(".container").fadeOut(100);
+			$.post('http://od_profile/NUIFocusOff');
+        }
+    });
+    </script>
+	</body>
+</html>
